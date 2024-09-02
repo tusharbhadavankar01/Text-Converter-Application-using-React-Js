@@ -1,9 +1,10 @@
 import "./App.css";
 import Alert from "./Components/Alert";
-//import About from "./Components/About";
+import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import Textform from "./Components/Textform";
 import React, { useState } from 'react';
+import {BrowserRouter as Router,Routes, Route} from "react-router-dom";
 
 
 
@@ -40,14 +41,18 @@ function App() {
   }
 }
   return (
-    <>
-     <Navbar title="Text Converter" mode={mode} toggleMode={toggleMode}/>
-     <Alert alert={alert}/>
-     <div className="container my-3">
-     <Textform  showAlert={showAlert} heading="Enter the Text to Convert" mode={mode} /> 
-     </div>
+    
+    <Router>
+      <Navbar title="Text Converter" mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} />
+      <div className="container my-3">
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Textform showAlert={showAlert} heading="Enter the Text to Convert" mode={mode} />} />
+        </Routes>
+      </div>
+    </Router>
 
-    </>
   );
 }
 
