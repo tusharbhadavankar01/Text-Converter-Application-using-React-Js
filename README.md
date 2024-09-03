@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-# Note:- GitHub Pages doesn’t support routers if mey be fails to run. if you want to run this code, then download and run on your system.
+# Note:- GitHub Pages doesn’t support routers if may be fails to run. if you want to run this code, then download and run on your system.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
